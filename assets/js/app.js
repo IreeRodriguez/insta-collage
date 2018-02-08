@@ -15,6 +15,7 @@ function drop(ev) {
 
 window.onload = function () {
     let button = document.getElementById('btn');
+    getLocal();
     
 }
 
@@ -30,7 +31,31 @@ btn.addEventListener('click', function(event) {
     if (pattern.test(email) && minpass.test(password) && password !== '123456' ) {
         login.classList.add("d-none");
         collage.classList.remove("d-none");
+        saveLocal();
     }
+
 
 });
 
+function saveLocal () {
+    let user = {
+        email : document.getElementById('email').value,
+        password : document.getElementById('pass').value
+    };
+
+    localStorage.setItem('user', JSON.stringify(user));
+}
+
+function getLocal () {
+    if (localStorage.getItem('user')){
+        let user = JSON.parse(localStorage.getItem('user'));
+        document.getElementById('email').value = user.email;
+        document.getElementById('pass').value = user.password;
+        
+        console.log(user);
+    } else {
+        document.getElementById('email').value = '';
+        document.getElementById('pass').value = '';
+    }
+    
+}
