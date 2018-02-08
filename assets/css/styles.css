@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+    color: white;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#login{
+    background: linear-gradient(to bottom left, #5BB58C -1%, #CF7850 100%);
+    height: 100vh;
+    min-height: 31em;
+}
+#logindiv{
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between !important;
+    padding: 5%;
+}
+#logo{
+    max-width: 50%;
+    margin: 5%;
+}
+input{
+    background-color: rgba(255, 255, 255, 0.8) !important;
+}
+#div1 {
+    padding:  5% 1%;
+    min-width: 100%;
+    min-height:  3em;
+    padding: 1em10px;
+
+    /* background-color: white; */
+}
+#collage{
+    background-color: black;
+    min-height: 100vh;
+
+}
+
+#div1 img{
+    border: 0.2em solid white;
+
+}
+.photobooth{
+    padding: 0.3em;
+    /* background-color: lightslategray; */
+}
+
+.photos img{
+    max-height: 10em;
+    object-fit: cover;
+
+}
